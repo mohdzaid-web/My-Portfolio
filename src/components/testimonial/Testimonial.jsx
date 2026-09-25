@@ -1,13 +1,3 @@
-
-// const Testimonial = ()=>{
-//     return(
-//         <section id='testimonial'>
-
-//         </section>
-//     )
-// }
-// export default Testimonial
-
 import { motion } from "motion/react";
 
 import {
@@ -18,18 +8,12 @@ import {
   FaStar,
 } from "react-icons/fa";
 
-import {
-  SiNodedotjs,
-  SiGooglecloud,
-} from "react-icons/si";
+import { SiNodedotjs, SiGooglecloud } from "react-icons/si";
 
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { TbBrain } from "react-icons/tb";
 
-import {
-  Swiper,
-  SwiperSlide,
-} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import {
   Navigation,
@@ -46,13 +30,9 @@ import "swiper/css/effect-coverflow";
 
 const Testimonial = () => {
 
-  /*
-  ============================================================
-  CERTIFICATE DATA
-  ============================================================
-  Replace these image paths with your actual certificate images.
-  ============================================================
-  */
+  /* ============================================================
+     CERTIFICATE DATA
+  ============================================================ */
 
   const certificates = [
     {
@@ -69,7 +49,7 @@ const Testimonial = () => {
       id: 2,
       image: "/certificate1-ultra-hd.png",
       platform: "freeCodeCamp",
-      title:"Responsive Web Design Developer Certification",
+      title: "Responsive Web Design Developer Certification",
       skills: "HTML, CSS, Responsive Web Design",
       year: "2026",
       verified: true,
@@ -79,7 +59,7 @@ const Testimonial = () => {
       id: 3,
       image: "/react-redux-ultra-hd.png",
       platform: "KnowledgeGate",
-      title:  "React and Redux Certification",
+      title: "React and Redux Certification",
       skills: "React, Redux, Components, State Management",
       year: "2026",
       verified: true,
@@ -90,18 +70,16 @@ const Testimonial = () => {
       image: "/certificate2-ultra-hd.png",
       platform: "freeCodeCamp",
       title: "JavaScript Developer Certification",
-      skills:  "JavaScript, ES6, DOM, Algorithms",
+      skills: "JavaScript, ES6, DOM, Algorithms",
       year: "2026",
       verified: true,
     },
   ];
 
 
-  /*
-  ============================================================
-  LEARNING DATA
-  ============================================================
-  */
+  /* ============================================================
+     LEARNING DATA
+  ============================================================ */
 
   const learning = [
     {
@@ -136,11 +114,10 @@ const Testimonial = () => {
 
   return (
     <section
-       id="certificates"
+      id="certificates"
       className="
         relative
         isolate
-        
         min-h-screen
         overflow-hidden
         bg-[#060a14]
@@ -152,13 +129,13 @@ const Testimonial = () => {
       "
     >
 
-      {/* =====================================================
-          BACKGROUND
-      ===================================================== */}
+      {/* ============================================================
+          BACKGROUND EFFECTS
+      ============================================================ */}
 
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 
-        {/* Top blue glow */}
+        {/* Top Blue Glow */}
         <motion.div
           className="
             absolute
@@ -182,7 +159,7 @@ const Testimonial = () => {
           }}
         />
 
-        {/* Purple glow */}
+        {/* Purple Glow */}
         <motion.div
           className="
             absolute
@@ -206,7 +183,7 @@ const Testimonial = () => {
           }}
         />
 
-        {/* Small blue glow */}
+        {/* Small Blue Glow */}
         <motion.div
           className="
             absolute
@@ -229,7 +206,7 @@ const Testimonial = () => {
           }}
         />
 
-        {/* Decorative ring */}
+        {/* Decorative Rings */}
         <motion.div
           className="
             absolute
@@ -275,16 +252,16 @@ const Testimonial = () => {
       </div>
 
 
-      {/* =====================================================
+      {/* ============================================================
           MAIN CONTAINER
-      ===================================================== */}
+      ============================================================ */}
 
       <div className="mx-auto max-w-7xl">
 
 
-        {/* ===================================================
-            HEADER
-        =================================================== */}
+        {/* ============================================================
+            SECTION HEADER
+        ============================================================ */}
 
         <motion.div
           initial={{
@@ -305,7 +282,8 @@ const Testimonial = () => {
           className="max-w-2xl"
         >
 
-          {/* Small heading */}
+          {/* Small Heading */}
+
           <div className="mb-4 flex items-center gap-4">
 
             <span
@@ -343,7 +321,8 @@ const Testimonial = () => {
           </div>
 
 
-          {/* Main heading */}
+          {/* Main Heading */}
+
           <h2
             className="
               text-4xl
@@ -371,6 +350,8 @@ const Testimonial = () => {
           </h2>
 
 
+          {/* Description */}
+
           <p
             className="
               mt-5
@@ -389,9 +370,9 @@ const Testimonial = () => {
         </motion.div>
 
 
-        {/* ===================================================
+        {/* ============================================================
             DECORATIVE TEXT
-        =================================================== */}
+        ============================================================ */}
 
         <motion.div
           initial={{
@@ -450,7 +431,12 @@ const Testimonial = () => {
               duration: 2,
               repeat: Infinity,
             }}
-            className="mt-1 text-right text-xl text-blue-400"
+            className="
+              mt-1
+              text-right
+              text-xl
+              text-blue-400
+            "
           >
             ↗
           </motion.div>
@@ -458,9 +444,9 @@ const Testimonial = () => {
         </motion.div>
 
 
-        {/* ===================================================
+        {/* ============================================================
             CERTIFICATE + SIDE PANEL
-        =================================================== */}
+        ============================================================ */}
 
         <div
           className="
@@ -474,9 +460,9 @@ const Testimonial = () => {
         >
 
 
-          {/* =================================================
-              SWIPER
-          ================================================= */}
+          {/* ==========================================================
+              CERTIFICATE SWIPER
+          ========================================================== */}
 
           <motion.div
             initial={{
@@ -506,26 +492,27 @@ const Testimonial = () => {
               ]}
               effect="coverflow"
               centeredSlides={true}
-              // slidesPerView={1.15}
-              // spaceBetween={20}
-               loop={false}
-  spaceBetween={24}
-  slidesPerView={1}
-  slidesPerGroup={1}
-              // loop={certificates.length > 2}
+              spaceBetween={24}
+              slidesPerView={1}
+              slidesPerGroup={1}
+              loop={false}
               speed={900}
+
               autoplay={{
                 delay: 4500,
                 disableOnInteraction: false,
               }}
+
               navigation={{
                 nextEl: ".certificate-next",
                 prevEl: ".certificate-prev",
               }}
+
               pagination={{
                 el: ".certificate-pagination",
                 clickable: true,
               }}
+
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
@@ -533,44 +520,37 @@ const Testimonial = () => {
                 modifier: 1.2,
                 slideShadows: false,
               }}
-              // breakpoints={{
-              //   640: {
-              //     slidesPerView: 1.4,
-              //   },
 
-              //   768: {
-              //     slidesPerView: 1.6,
-              //   },
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                },
 
-              //   1024: {
-              //     slidesPerView: 1.7,
-              //   },
+                768: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 1,
+                },
 
-              //   1280: {
-              //     slidesPerView: 1.8,
-              //   },
-              // }}
-                breakpoints={{
-    640: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-    },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 1,
-    },
-    1024: {
-      slidesPerView: 2,
-      slidesPerGroup: 1,
-    },
-  }}
+                1024: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 1,
+                },
+              }}
+
               className="!overflow-visible"
             >
 
+              {/* ======================================================
+                  CERTIFICATE SLIDES
+              ====================================================== */}
+
               {certificates.map((certificate) => (
+
                 <SwiperSlide key={certificate.id}>
 
                   {({ isActive }) => (
+
                     <motion.div
                       animate={{
                         scale: isActive ? 1 : 0.84,
@@ -582,7 +562,10 @@ const Testimonial = () => {
                       className="relative"
                     >
 
-                      {/* Certificate card */}
+                      {/* =================================================
+                          CERTIFICATE CARD
+                      ================================================= */}
+
                       <div
                         className={`
                           relative
@@ -594,6 +577,7 @@ const Testimonial = () => {
                           backdrop-blur-xl
                           transition-all
                           duration-500
+
                           ${
                             isActive
                               ? "border-blue-400/50 shadow-[0_0_50px_rgba(59,130,246,0.22)]"
@@ -602,7 +586,8 @@ const Testimonial = () => {
                         `}
                       >
 
-                        {/* Animated border glow */}
+                        {/* Animated Border Glow */}
+
                         {isActive && (
                           <motion.div
                             className="
@@ -624,8 +609,10 @@ const Testimonial = () => {
                         )}
 
 
-                        {/* Verified */}
+                        {/* Verified Badge */}
+
                         {isActive && certificate.verified && (
+
                           <motion.div
                             initial={{
                               opacity: 0,
@@ -656,13 +643,16 @@ const Testimonial = () => {
                             "
                           >
                             <FaCheckCircle />
-
                             Verified
                           </motion.div>
+
                         )}
 
 
-                        {/* Certificate image */}
+                        {/* =================================================
+                            CERTIFICATE IMAGE
+                        ================================================= */}
+
                         <div
                           className="
                             relative
@@ -684,9 +674,9 @@ const Testimonial = () => {
                               duration-700
                             "
                           />
-           
 
-                          {/* Image overlay */}
+                          {/* Image Overlay */}
+
                           <div
                             className="
                               pointer-events-none
@@ -702,7 +692,10 @@ const Testimonial = () => {
                         </div>
 
 
-                        {/* Certificate information */}
+                        {/* =================================================
+                            CERTIFICATE INFORMATION
+                        ================================================= */}
+
                         <div
                           className="
                             mt-3
@@ -719,6 +712,8 @@ const Testimonial = () => {
                             sm:justify-between
                           "
                         >
+
+                          {/* Certificate Details */}
 
                           <div className="flex items-center gap-3">
 
@@ -771,6 +766,8 @@ const Testimonial = () => {
                           </div>
 
 
+                          {/* Issued + Credential */}
+
                           <div
                             className="
                               flex
@@ -781,6 +778,7 @@ const Testimonial = () => {
                           >
 
                             <div>
+
                               <p className="text-[9px] text-slate-600">
                                 ISSUED
                               </p>
@@ -788,6 +786,7 @@ const Testimonial = () => {
                               <p className="mt-1 text-slate-300">
                                 {certificate.year}
                               </p>
+
                             </div>
 
                             <div
@@ -816,17 +815,19 @@ const Testimonial = () => {
                       </div>
 
                     </motion.div>
+
                   )}
 
                 </SwiperSlide>
+
               ))}
 
             </Swiper>
 
 
-            {/* =================================================
-                NAVIGATION BUTTONS
-            ================================================= */}
+            {/* ==========================================================
+                PREVIOUS BUTTON
+            ========================================================== */}
 
             <motion.button
               whileHover={{
@@ -865,6 +866,10 @@ const Testimonial = () => {
             </motion.button>
 
 
+            {/* ==========================================================
+                NEXT BUTTON
+            ========================================================== */}
+
             <motion.button
               whileHover={{
                 scale: 1.1,
@@ -902,7 +907,10 @@ const Testimonial = () => {
             </motion.button>
 
 
-            {/* Pagination */}
+            {/* ==========================================================
+                PAGINATION
+            ========================================================== */}
+
             <div
               className="
                 certificate-pagination
@@ -916,9 +924,9 @@ const Testimonial = () => {
           </motion.div>
 
 
-          {/* =================================================
+          {/* ============================================================
               RIGHT INFORMATION CARD
-          ================================================= */}
+          ============================================================ */}
 
           <motion.aside
             initial={{
@@ -948,7 +956,8 @@ const Testimonial = () => {
             "
           >
 
-            {/* Certificates earned */}
+            {/* Certificates Earned */}
+
             <div className="flex items-center gap-4">
 
               <div
@@ -987,7 +996,8 @@ const Testimonial = () => {
             <div className="my-6 h-px bg-white/[0.08]" />
 
 
-            {/* Expertise */}
+            {/* Areas of Expertise */}
+
             <div>
 
               <div className="mb-4 flex items-center gap-3">
@@ -1023,6 +1033,7 @@ const Testimonial = () => {
                   "Frontend",
                   "Problem Solving",
                 ].map((skill) => (
+
                   <span
                     key={skill}
                     className="
@@ -1038,6 +1049,7 @@ const Testimonial = () => {
                   >
                     {skill}
                   </span>
+
                 ))}
 
               </div>
@@ -1049,6 +1061,7 @@ const Testimonial = () => {
 
 
             {/* Quote */}
+
             <div>
 
               <HiOutlineSparkles
@@ -1078,9 +1091,9 @@ const Testimonial = () => {
         </div>
 
 
-        {/* ===================================================
+        {/* ============================================================
             WHAT I'M LEARNING NEXT
-        =================================================== */}
+        ============================================================ */}
 
         <motion.div
           initial={{
@@ -1118,7 +1131,10 @@ const Testimonial = () => {
             "
           >
 
-            {/* Learning introduction */}
+            {/* ========================================================
+                LEARNING INTRODUCTION
+            ======================================================== */}
+
             <div className="p-6 sm:p-8">
 
               <div
@@ -1138,6 +1154,7 @@ const Testimonial = () => {
               >
                 <HiOutlineSparkles />
               </div>
+
 
               <h3
                 className="
@@ -1161,6 +1178,7 @@ const Testimonial = () => {
                 </span>
               </h3>
 
+
               <p
                 className="
                   mt-3
@@ -1178,7 +1196,10 @@ const Testimonial = () => {
             </div>
 
 
-            {/* Technologies */}
+            {/* ========================================================
+                TECHNOLOGIES
+            ======================================================== */}
+
             <div
               className="
                 grid
@@ -1192,10 +1213,12 @@ const Testimonial = () => {
             >
 
               {learning.map((item, index) => (
+
                 <motion.div
                   key={item.title}
                   whileHover={{
-                    backgroundColor: "rgba(255,255,255,0.025)",
+                    backgroundColor:
+                      "rgba(255,255,255,0.025)",
                   }}
                   className="
                     flex
@@ -1222,13 +1245,11 @@ const Testimonial = () => {
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                    className={`
-                      text-3xl
-                      ${item.className}
-                    `}
+                    className={`text-3xl ${item.className}`}
                   >
                     {item.icon}
                   </motion.div>
+
 
                   <p
                     className="
@@ -1241,6 +1262,7 @@ const Testimonial = () => {
                     {item.title}
                   </p>
 
+
                   <p
                     className="
                       mt-1
@@ -1252,12 +1274,16 @@ const Testimonial = () => {
                   </p>
 
                 </motion.div>
+
               ))}
 
             </div>
 
 
-            {/* Projects button */}
+            {/* ========================================================
+                PROJECTS BUTTON
+            ======================================================== */}
+
             <div
               className="
                 flex
@@ -1308,6 +1334,7 @@ const Testimonial = () => {
                 <FaArrowRight
                   className="text-purple-400"
                 />
+
               </motion.a>
 
             </div>
@@ -1319,9 +1346,9 @@ const Testimonial = () => {
       </div>
 
 
-      {/* =====================================================
-          CUSTOM SWIPER DOT STYLE
-      ===================================================== */}
+      {/* ============================================================
+          CUSTOM SWIPER PAGINATION STYLE
+      ============================================================ */}
 
       <style>
         {`
@@ -1355,5 +1382,6 @@ const Testimonial = () => {
     </section>
   );
 };
+
 
 export default Testimonial;

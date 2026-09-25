@@ -54,4 +54,3 @@ const HeaderSocials = () => {
 };
 
 export default HeaderSocials;
-

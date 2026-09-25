@@ -388,6 +388,7 @@
 // };
 
 // export default Nav;
+
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
@@ -724,3 +725,4 @@ const Nav = () => {
 };
 
 export default Nav;
+
