@@ -1,5 +1,3 @@
-
-
 import { motion } from "motion/react";
 import {
   FiGithub,
@@ -155,7 +153,6 @@ const Portfolio = () => {
 
         {/* ================= PROJECT GRID ================= */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-
           {data.map(
             ({ id, image, title, github, demo, technologies }, index) => (
               <motion.article
@@ -184,16 +181,20 @@ const Portfolio = () => {
                   </div>
 
                   {/* ================= IMAGE ================= */}
-                  <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-
+                  <motion.div
+                    className="group/image relative overflow-hidden rounded-2xl border border-white/10 bg-black/30"
+                    whileHover="imageHover"
+                  >
                     <motion.img
                       src={image}
                       alt={title}
                       loading="lazy"
                       decoding="async"
                       className="h-[230px] w-full object-cover sm:h-[270px]"
-                      whileHover={{
-                        scale: 1.08,
+                      variants={{
+                        imageHover: {
+                          scale: 1.08,
+                        },
                       }}
                       transition={{
                         duration: 0.6,
@@ -221,7 +222,7 @@ const Portfolio = () => {
                         <FiArrowUpRight className="text-2xl text-white" />
                       </div>
                     </motion.div>
-                  </div>
+                  </motion.div>
 
                   {/* ================= TITLE ================= */}
                   <div className="mt-6">
