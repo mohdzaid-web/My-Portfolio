@@ -1,3 +1,5 @@
+
+
 import { motion } from "motion/react";
 import {
   FiGithub,
@@ -9,7 +11,7 @@ import {
 const data = [
   {
     id: 1,
-    image: "/Ecommerce.png",
+    image: "/Ecommerce.webp",
     title: "React E-Commerce Platform",
     github: "https://github.com/mohdzaid-web/React-ecommerce-website",
     demo: "https://zaid-ecommerce-website.netlify.app",
@@ -32,7 +34,7 @@ const data = [
 
   {
     id: 2,
-    image: "/Gemini.png",
+    image: "/Gemini.webp",
     title: "AI-Powered Chat Assistant",
     github: "https://github.com/mohdzaid-web/Google-Gemini-project",
     demo: "https://zaid-gemini.netlify.app",
@@ -50,7 +52,7 @@ const data = [
 
   {
     id: 3,
-    image: "/Demo.png",
+    image: "/Demo.webp",
     title: "Responsive React Web Experience",
     github: "https://github.com/mohdzaid-web/React-website",
     demo: "https://zaid-demo-website.netlify.app",
@@ -68,7 +70,7 @@ const data = [
 
   {
     id: 4,
-    image: "/Myntra.png",
+    image: "/Myntra.webp",
     title: "Fashion E-Commerce Clone",
     github: "https://github.com/mohdzaid-web/redux-myntra-project",
     demo: "https://zaid-myntr.netlify.app",
@@ -187,6 +189,8 @@ const Portfolio = () => {
                     <motion.img
                       src={image}
                       alt={title}
+                      loading="lazy"
+                      decoding="async"
                       className="h-[230px] w-full object-cover sm:h-[270px]"
                       whileHover={{
                         scale: 1.08,

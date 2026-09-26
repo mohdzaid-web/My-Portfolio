@@ -1,3 +1,5 @@
+
+
 import { motion } from "motion/react";
 
 import {
@@ -233,6 +235,8 @@ const Services = () => {
                 <motion.img
                   src={service.image}
                   alt={service.title}
+                  loading="lazy"
+                  decoding="async"
                   initial={{ scale: 1 }}
                   whileHover={{
                     scale: 1.07,

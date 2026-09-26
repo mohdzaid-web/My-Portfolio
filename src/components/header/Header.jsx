@@ -1,3 +1,5 @@
+
+
 import { motion } from "motion/react";
 import CV from "./CV";
 import HeaderSocials from "./HeaderSocials";
@@ -187,8 +189,13 @@ const Header = () => {
                 <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-b from-cyan-400/10 to-transparent">
 
                   <img
-                    src="/me.jpeg"
+                    src="/me.webp"
                     alt="Mohd Zaid"
+                    width="896"
+                    height="1195"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
                   />
 

@@ -1,3 +1,4 @@
+
 import { motion } from "motion/react";
 import { FiDownload } from "react-icons/fi";
 
@@ -17,4 +18,3 @@ const CV = () => {
 };
 
 export default CV;
-

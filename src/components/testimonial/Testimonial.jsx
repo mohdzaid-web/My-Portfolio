@@ -34,10 +34,10 @@ const Testimonial = () => {
      CERTIFICATE DATA
   ============================================================ */
 
-  const certificates = [
+   const certificates = [
     {
       id: 1,
-      image: "/react-redux-ultra-hd.png",
+      image: "/react-redux.webp",
       platform: "KnowledgeGate",
       title: "React and Redux Certification",
       skills: "React, Redux, Components, State Management",
@@ -47,7 +47,7 @@ const Testimonial = () => {
 
     {
       id: 2,
-      image: "/certificate1-ultra-hd.png",
+      image: "/certificate1.webp",
       platform: "freeCodeCamp",
       title: "Responsive Web Design Developer Certification",
       skills: "HTML, CSS, Responsive Web Design",
@@ -57,7 +57,7 @@ const Testimonial = () => {
 
     {
       id: 3,
-      image: "/react-redux-ultra-hd.png",
+      image: "/react-redux.webp",
       platform: "KnowledgeGate",
       title: "React and Redux Certification",
       skills: "React, Redux, Components, State Management",
@@ -67,7 +67,7 @@ const Testimonial = () => {
 
     {
       id: 4,
-      image: "/certificate2-ultra-hd.png",
+      image: "/certificate2.webp",
       platform: "freeCodeCamp",
       title: "JavaScript Developer Certification",
       skills: "JavaScript, ES6, DOM, Algorithms",
@@ -75,7 +75,6 @@ const Testimonial = () => {
       verified: true,
     },
   ];
-
 
   /* ============================================================
      LEARNING DATA
@@ -273,7 +272,7 @@ const Testimonial = () => {
             y: 0,
           }}
           viewport={{
-            once: true,
+            once: false,
             amount: 0.2,
           }}
           transition={{
@@ -384,7 +383,7 @@ const Testimonial = () => {
             x: 0,
           }}
           viewport={{
-            once: true,
+            once: false,
           }}
           transition={{
             duration: 0.8,
@@ -474,7 +473,7 @@ const Testimonial = () => {
               scale: 1,
             }}
             viewport={{
-              once: true,
+              once: false,
               amount: 0.15,
             }}
             transition={{
@@ -737,11 +736,25 @@ const Testimonial = () => {
 
                             <div>
 
-                              <p className="text-[10px] text-slate-500">
+                              <motion.p
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{
+                                  opacity: isActive ? 1 : 0.7,
+                                  y: isActive ? 0 : 4,
+                                }}
+                                transition={{ duration: 0.45, delay: 0.05 }}
+                                className="text-[10px] text-slate-500"
+                              >
                                 {certificate.platform}
-                              </p>
+                              </motion.p>
 
-                              <h3
+                              <motion.h3
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{
+                                  opacity: isActive ? 1 : 0.7,
+                                  y: isActive ? 0 : 4,
+                                }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
                                 className="
                                   text-sm
                                   font-semibold
@@ -749,9 +762,15 @@ const Testimonial = () => {
                                 "
                               >
                                 {certificate.title}
-                              </h3>
+                              </motion.h3>
 
-                              <p
+                              <motion.p
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{
+                                  opacity: isActive ? 1 : 0.7,
+                                  y: isActive ? 0 : 4,
+                                }}
+                                transition={{ duration: 0.45, delay: 0.15 }}
                                 className="
                                   mt-1
                                   text-[10px]
@@ -759,7 +778,7 @@ const Testimonial = () => {
                                 "
                               >
                                 {certificate.skills}
-                              </p>
+                              </motion.p>
 
                             </div>
 
@@ -779,13 +798,29 @@ const Testimonial = () => {
 
                             <div>
 
-                              <p className="text-[9px] text-slate-600">
+                              <motion.p
+                                initial={{ opacity: 0, y: 8 }}
+                                animate={{
+                                  opacity: isActive ? 1 : 0.7,
+                                  y: isActive ? 0 : 3,
+                                }}
+                                transition={{ duration: 0.4, delay: 0.2 }}
+                                className="text-[9px] text-slate-600"
+                              >
                                 ISSUED
-                              </p>
+                              </motion.p>
 
-                              <p className="mt-1 text-slate-300">
+                              <motion.p
+                                initial={{ opacity: 0, y: 8 }}
+                                animate={{
+                                  opacity: isActive ? 1 : 0.7,
+                                  y: isActive ? 0 : 3,
+                                }}
+                                transition={{ duration: 0.4, delay: 0.25 }}
+                                className="mt-1 text-slate-300"
+                              >
                                 {certificate.year}
-                              </p>
+                              </motion.p>
 
                             </div>
 
@@ -938,7 +973,7 @@ const Testimonial = () => {
               x: 0,
             }}
             viewport={{
-              once: true,
+              once: false,
               amount: 0.2,
             }}
             transition={{
@@ -1105,7 +1140,7 @@ const Testimonial = () => {
             y: 0,
           }}
           viewport={{
-            once: true,
+            once: false,
             amount: 0.2,
           }}
           transition={{
@@ -1376,7 +1411,7 @@ const Testimonial = () => {
               margin-top: 20px;
             }
           }
-        `}
+          `}
       </style>
 
     </section>
