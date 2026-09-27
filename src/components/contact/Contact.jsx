@@ -389,7 +389,7 @@ const Contact = () => {
 
                 {/* LINKEDIN */}
                 <motion.a
-                  href="https://www.linkedin.com/in/mohd-zaid-3a84a1431/"
+                  href="https://www.linkedin.com/in/mohd-zaid-web/"
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{

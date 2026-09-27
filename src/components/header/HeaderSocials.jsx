@@ -9,7 +9,7 @@ const HeaderSocials = () => {
   const socials = [
     {
       icon: <ImLinkedin />,
-      link: "https://www.linkedin.com/in/mohd-zaid-3a84a1431/",
+      link: "https://www.linkedin.com/in/mohd-zaid-web/",
       label: "LinkedIn",
     },
     {
